@@ -10,10 +10,13 @@ import * as firebase from 'Firebase';
 export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
+	this.roomkey = this.navParams.get("key") as string;
+    this.nickname = this.navParams.get("nickname") as string;
   }
 
   joinChat() {
-    this.navCtrl.setRoot(RoomPage);
+    this.navCtrl.setRoot(RoomPage, {
+      nickname:this.navParams.get("nickname")
+    });
   }
 }
