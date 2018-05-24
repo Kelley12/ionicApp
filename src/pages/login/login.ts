@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from  '../home/home';
 
 /**
- * Generated class for the SigninPage page.
+ * Generated class for the LoginPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,10 +11,10 @@ import { HomePage } from  '../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-signin',
-  templateUrl: 'signin.html',
+  selector: 'page-login',
+  templateUrl: 'login.html',
 })
-export class SigninPage {
+export class LoginPage {
 
   data = { nickname:"" };
 
@@ -22,7 +22,7 @@ export class SigninPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SigninPage');
+    console.log('ionViewDidLoad LoginPage');
   }
 
   enterNickname() {
@@ -30,5 +30,4 @@ export class SigninPage {
       nickname: this.data.nickname
     });
   }
-
 }

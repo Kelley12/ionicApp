@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ChatPage } from '../pages/chat/chat';
-import { SigninPage } from '../pages/signin/signin';
+import { LoginPage } from '../pages/login/login';
 import { RoomPage } from '../pages/room/room';
 import { AddRoomPage } from '../pages/add-room/add-room';
 
@@ -16,7 +16,7 @@ import { AddRoomPage } from '../pages/add-room/add-room';
     MyApp,
     HomePage,
     ChatPage,
-    SigninPage,
+    LoginPage,
     RoomPage,
     AddRoomPage
   ],
@@ -29,7 +29,7 @@ import { AddRoomPage } from '../pages/add-room/add-room';
     MyApp,
     HomePage,
     ChatPage,
-    SigninPage,
+    LoginPage,
     RoomPage,
     AddRoomPage
   ],
