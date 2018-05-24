@@ -3,7 +3,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import * as firebase from 'firebase';
-import { SigninPage } from '../pages/signin/signin';
+import { LoginPage } from '../pages/login/login';
 
 const config = {
   apiKey: 'AIzaSyAw7zS5TyBBmwgxpx6YXS05c6a98q4XPVU',
@@ -17,7 +17,7 @@ const config = {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SigninPage;
+  rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
