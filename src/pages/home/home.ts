@@ -1,7 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, Content } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 import { RoomPage } from '../room/room';
-import * as firebase from 'Firebase';
 
 @Component({
   selector: 'page-home',
@@ -10,8 +9,6 @@ import * as firebase from 'Firebase';
 export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.roomkey = this.navParams.get("key") as string;
-    this.nickname = this.navParams.get("nickname") as string;
   }
 
   joinChat() {

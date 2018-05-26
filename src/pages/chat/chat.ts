@@ -44,14 +44,16 @@ export class ChatPage {
   }
 
   sendMessage() {
-    let newData = firebase.database().ref('chatrooms/'+this.roomkey+'/chats').push();
-    newData.set({
-      type:this.data.type,
-      user:this.data.nickname,
-      message:this.data.message,
-      sendDate:Date()
-    });
-    this.data.message = '';
+    if(this.data.message.trim() != '') {
+      let newData = firebase.database().ref('chatrooms/'+this.roomkey+'/chats').push();
+      newData.set({
+        type:this.data.type,
+        user:this.data.nickname,
+        message:this.data.message,
+        sendDate:Date()
+      });
+      this.data.message = '';
+    }
   }
 
   exitChat() {
