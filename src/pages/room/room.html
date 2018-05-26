@@ -2,8 +2,8 @@
   <ion-navbar>
     <ion-title>Chat Rooms</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="addRoom()">
-        <ion-icon name="add-circle"></ion-icon>
+      <button ion-button icon-only (click)="exitChat()">
+        <ion-icon name="exit"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -11,9 +11,14 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let room of rooms">
+    <ion-item *ngFor="let room of rooms" (click)="joinRoom(room.key)">
       {{room.roomname}}
-      <ion-icon name="chatboxes" item-end (click)="joinRoom(room.key)"></ion-icon>
+      <ion-icon name="chatboxes" item-end></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>
+
+<button class="button button-float" (click)="addRoom()">
+  <!--Basic: auto-select the icon based on the platform -->
+  <ion-icon name="add" class="add-button"></ion-icon>
+</button>

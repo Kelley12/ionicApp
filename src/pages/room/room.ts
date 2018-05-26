@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AddRoomPage } from '../add-room/add-room';
 import { ChatPage } from '../chat/chat';
+import { HomePage } from '../home/home';
 import * as firebase from 'Firebase';
 
 @IonicPage()
@@ -33,6 +34,12 @@ export class RoomPage {
     this.navCtrl.setRoot(ChatPage, {
       key:key,
       nickname:this.navParams.get("nickname")
+    });
+  }
+
+  exitChat() {
+    this.navCtrl.setRoot(HomePage, {
+      nickname:this.nickname
     });
   }
 }
